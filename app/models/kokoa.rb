@@ -1,0 +1,2 @@
+class Kokoa < ApplicationRecord
+end
