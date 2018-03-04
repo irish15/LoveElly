@@ -1,21 +1,42 @@
 <body>
-<h1>イノシシ検知</h1>
+<h1 id="title">Wild Boar Detection System</h1>
+<br>
+
+<%= link_to("sensor stop","/stop")%>
 
   <div id="container">
 
     <div id="left">
       <div id = "time">
-        2018年2月25日11時：3件 / A：2件 B：1件<br>
+		 <h2>The Latest Detection Time</h2>
+        <% latest = @data.last %>
+        <p id="latest_time">Time : <%= latest.invasion_time %></p>
+        <p id="latest_location">Location : </p>
+				<p id="location_col"><%= latest.invasion_location%></p>
       </div>
 
       <div id = "graph">
-
+		<h2>The Today's count Boar Comes</h2>
+				<p><%= @time %></p>
+				<p id="countnum"><%= @today_num %></p>
       </div>
-
     </div>
 
     <div id="right">
+			<h2>All log</h2>
+<table border="1", align="center">
+				<tr>
+						<th>時間:</th>
+						<th> 場所:</th>	
+				</tr>
 
+		 <% @data.each do |topic| %>
+				<tr>
+						<td>	<%= topic.invasion_time %> </td>
+						<td> <%= topic.invasion_location%></td>
+				</tr>
+        <%end%>
+		</table>
     </div>
 
   </div>

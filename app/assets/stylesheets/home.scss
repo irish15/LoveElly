@@ -3,17 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-background-color: #F3F781;
+background-color: rgba(241,230,171,0.5);
 //background-image: url("画像へのパス");
 
 #container {
   margin: auto;
   width: 960px;
+  font-family: 'TsukuBRdGothic-Regular',sans-serif;
 }
 
 #left {
   width: 465px;
   float: left;
+  text-align: center;
 }
 
 #time {
@@ -27,24 +29,53 @@ background-color: #F3F781;
   border: dashed 2px #ffc3c3;
   border-radius: 8px;
   overflow: scroll;
+  text-align: center;
 }
 
 #graph {
   height: 245px;
-  background-color: red;
+  background-color: rgba(122,163,218,0.7);
 }
 
 #right {
   width: 465px;
   height: 500px;
   float: right;
-//  padding: 0.2em 0.5em;
+  padding: 0.2em 0.5em;
 //  margin: 2em 0;
   color: #565656;
   background: #d6ebff;
   box-shadow: 0px 0px 0px 10px #d6ebff;
   border: dashed 2px #74c1f8;
   border-radius: 8px;
+  overflow: scroll;
+  text-align: center;
+}
+
+  #title{
+    text-align: center;
+    font-family: Avenir;
+    font-size: 40px;
+  }
+
+#latest_time{
+  font-size: 27px;
+}
+
+#latest_location{
+  font-size: 40px;
+  display: inline;
+}
+
+#location_col{
+  font-size: 40px;
+  display: inline;
+  color: rgba(255,0,0,0.65);
+}
+
+#countnum{
+  font-size: 60px;
+  color: rgba(0,0,255,0.65);
 }
 
 }
