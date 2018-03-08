@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20180225022124) do
   create_table "kokoas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "invasion_time"
     t.string "invasion_location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'log/index'
+
   root 'home#top'
 
   get "/stop" => "home#stopserver"
